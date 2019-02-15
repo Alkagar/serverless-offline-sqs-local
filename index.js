@@ -29,7 +29,7 @@ class ServerlessOfflineSQS {
     this.serverless = serverless
     this.service = serverless.service
     this.options = options
-    this.config = getConfig(this.service, 'serverless-offline-sqs-esmq')
+    this.config = getConfig(this.service, 'serverless-offline-sqs-local')
 
     this.commands = {}
 
