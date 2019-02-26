@@ -9,7 +9,7 @@ docker run -it -p 9324:9324 s12v/elasticmq:latest
 ## Install
 
 ```bash
-npm install serverless-offline-sqs-esmq
+npm install serverless-offline-sqs-local
 ```
 
 ## Starting a Queue
@@ -18,7 +18,7 @@ npm install serverless-offline-sqs-esmq
 ```yml
 
 custom:
-  serverless-offline-sqs-esmq:
+  serverless-offline-sqs-local:
     apiVersion: '2012-11-05'
     endpoint: http://0.0.0.0:9324
     region: sa-east-1
@@ -58,5 +58,7 @@ Serverless: Creating Queue BooksQueueExample
 ...
 ```
 
+## TODO
+- enable redrive policy property on local sqs
 
 Credits: This is a custom fork from https://www.npmjs.com/package/serverless-offline-sqs-esmq.

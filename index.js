@@ -227,6 +227,7 @@ class ServerlessOfflineSQS {
       forEach((resourceName) => {
         if (this.service.resources.Resources[resourceName].Type === 'AWS::SQS::Queue') {
           this.serverless.cli.log(`Creating Queue ${resourceName}`)
+          delete this.service.resources.Resources[resourceName].Properties.RedrivePolicy
           promises.push(this.createInitialQueue(this.service.resources.Resources[resourceName].Properties))
         }
       }, resouces)
