@@ -26,5 +26,5 @@
     "url": "git+https://github.com/alkagar/serverless-offline-sqs-local.git"
   },
   "scripts": {},
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
